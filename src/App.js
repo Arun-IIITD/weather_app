@@ -14,6 +14,9 @@ function App() {
     const fetch_city = async() => {
       if (!city) return;
 
+      setLoading(true);
+  setWeather(null);
+
 
       try {
          
@@ -37,6 +40,8 @@ function App() {
        alert("Failed to fetch weather data");
       console.log(error)
       return;
+    }finally{
+      setLoading(false)
     }
 };
 

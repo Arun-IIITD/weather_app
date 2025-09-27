@@ -81,7 +81,7 @@ function App() {
 
            {weather && !loading && (
 
-        <>
+        <div className="weather-cards">
 
           <div className="weather-card">
             <h3>Temperature</h3>
@@ -102,8 +102,8 @@ function App() {
             <h3>Wind Speed</h3>
             <p>{weather.current.wind_kph} kph</p>
           </div>
-
-        </>
+          
+        </div>
       )}
 
  
